@@ -165,7 +165,9 @@ function App() {
   async function submitQuestion(e) {
   e.preventDefault();
 
-  const form = new FormData(e.currentTarget);
+  // Save the form element BEFORE the await.
+  const formElement = e.currentTarget;
+  const form = new FormData(formElement);
 
   setQuestionLoading(true);
 
@@ -178,10 +180,11 @@ function App() {
       question: form.get("question")
     });
 
-    // Apps Script has received the request.
-    // Don't attempt to read its cross-origin response.
+    // Show success message
     setQuestionSubmitted(true);
-    e.currentTarget.reset();
+
+    // Reset the form safely
+    formElement.reset();
 
   } catch (error) {
     console.error("Question submission error:", error);
