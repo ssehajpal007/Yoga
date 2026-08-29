@@ -19,6 +19,8 @@ import {
   Video,
   X
 } from "lucide-react";
+import yogaHero from "./assets/yoga-hero.jpg";
+import yogaWhy from "./assets/yoga-why.jpg";
 import "./styles.css";
 
 const CONFIG = {
@@ -250,7 +252,7 @@ function App() {
 
             <div className="hero-card-wrap">
               <div className="hero-card">
-                <div className="image-panel" role="img" aria-label="Adult European woman practicing yoga in a serene room">
+                <div className="image-panel" role="img" aria-label="Adult European woman practicing yoga in a serene room" style={{ backgroundImage: `url(${yogaHero})` }}>
                   <div className="image-overlay"></div>
                   <div className="image-caption">
                     <span>3-DAY EXPERIENCE</span>
@@ -285,7 +287,7 @@ function App() {
           <div className="shell why-grid">
             <div className="why-image-card">
               <img
-                src="/yoga-why.jpg"
+                src={yogaWhy}
                 alt="Adult European woman practicing Warrior II yoga in a bright, serene room"
                 loading="lazy"
               />
