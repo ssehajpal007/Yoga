@@ -163,28 +163,33 @@ function App() {
   }
 
   async function submitQuestion(e) {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    setQuestionLoading(true);
+  e.preventDefault();
 
-    try {
-      await postToSheet({
-  type: "question",
-  timestamp: new Date().toISOString(),
-  name: form.get("name"),
-  contact: form.get("contact"),
-  question: form.get("question")
-});
-      setQuestionSubmitted(true);
-      e.currentTarget.reset();
-    } catch {
-      // Keep question form simple; surface an inline message instead.
-      setQuestionSubmitted(false);
-      alert("We couldn't send your question. Please try again.");
-    } finally {
-      setQuestionLoading(false);
-    }
+  const form = new FormData(e.currentTarget);
+
+  setQuestionLoading(true);
+
+  try {
+    await postToSheet({
+      type: "question",
+      timestamp: new Date().toISOString(),
+      name: form.get("name"),
+      contact: form.get("contact"),
+      question: form.get("question")
+    });
+
+    // Apps Script has received the request.
+    // Don't attempt to read its cross-origin response.
+    setQuestionSubmitted(true);
+    e.currentTarget.reset();
+
+  } catch (error) {
+    console.error("Question submission error:", error);
+    setQuestionSubmitted(false);
+  } finally {
+    setQuestionLoading(false);
   }
+}
 
   return (
     <div className="site" id="top">
