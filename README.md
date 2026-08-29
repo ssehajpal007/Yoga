@@ -88,3 +88,5 @@ The legal pages included under `public/` are starter templates and should be rep
 ## Hero image
 
 The hero uses `public/yoga-hero.jpg`, an optimized visual asset generated for this landing page.
+
+The “Why Naturist Yoga?” section uses `public/yoga-why.jpg` as its secondary yoga visual.

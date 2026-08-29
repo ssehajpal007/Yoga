@@ -282,9 +282,21 @@ function App() {
         </section>
 
         <section className="section intro" id="workshop">
-          <div className="shell split-grid">
-            <div className="section-kicker">WHY NATURIST YOGA?</div>
-            <div>
+          <div className="shell why-grid">
+            <div className="why-image-card">
+              <img
+                src="/yoga-why.jpg"
+                alt="Adult European woman practicing Warrior II yoga in a bright, serene room"
+                loading="lazy"
+              />
+              <div className="why-image-caption">
+                <span>BODY AWARENESS</span>
+                <strong>Feel, don't judge.</strong>
+              </div>
+            </div>
+
+            <div className="why-copy">
+              <div className="section-kicker">WHY NATURIST YOGA?</div>
               <h2>Yoga. Mindfulness.<br /><em>Self-Acceptance.</em></h2>
               <p className="lead">
                 Many of us spend too much time worrying about how our bodies look.
