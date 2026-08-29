@@ -24,7 +24,7 @@ npm run build
 
 ## Google Sheets integration
 
-The frontend supports a Google Apps Script Web App endpoint through the Vite environment variable:
+The frontend supports a Google Apps Script Web App endpoint through the Vite environment variable::
 
 ```text
 VITE_GOOGLE_SHEETS_ENDPOINT
