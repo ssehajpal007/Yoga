@@ -138,17 +138,18 @@ function App() {
 
     try {
       await postToSheet({
-        timestamp: new Date().toISOString(),
-        name: form.get("name"),
-        age,
-        phone: form.get("phone"),
-        email: form.get("email"),
-        country: form.get("country"),
-        preferredSession: form.get("session"),
-        paymentStatus: "Pending",
-        telegramStatus: "Pending",
-        registrationStatus: "Inquiry"
-      });
+  type: "registration",
+  timestamp: new Date().toISOString(),
+  name: form.get("name"),
+  age: Number(form.get("age")),
+  phone: form.get("phone"),
+  email: form.get("email"),
+  country: form.get("country"),
+  preferredSession: form.get("session"),
+  paymentStatus: "Pending",
+  telegramStatus: "Pending",
+  registrationStatus: "Inquiry"
+});
 
       setRegSubmitted(true);
       e.currentTarget.reset();
@@ -168,12 +169,12 @@ function App() {
 
     try {
       await postToSheet({
-        timestamp: new Date().toISOString(),
-        type: "Question",
-        name: form.get("name"),
-        contact: form.get("contact"),
-        question: form.get("question")
-      });
+  type: "question",
+  timestamp: new Date().toISOString(),
+  name: form.get("name"),
+  contact: form.get("contact"),
+  question: form.get("question")
+});
       setQuestionSubmitted(true);
       e.currentTarget.reset();
     } catch {
