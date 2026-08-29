@@ -87,7 +87,7 @@ background-position: center;}
 .why-image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(31,43,37,.42),transparent 48%)}
 .why-image-caption{position:absolute;z-index:2;left:24px;right:24px;bottom:23px;color:#fff}
 .why-image-caption span{font-size:9px;letter-spacing:.18em;opacity:.9;color:#fff}
-.why-image-caption strong{display:block;font-family:"Playfair Display",serif;font-size:24px;line-height:1.1;margin-top:6px;font-weight:500color:#fff;}
+.why-image-caption strong{display:block;font-family:"Playfair Display",serif;font-size:24px;line-height:1.1;margin-top:6px;font-weight:500;color:#fff;}
 h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.7rem,5vw,4.3rem);line-height:1.03;letter-spacing:-.04em;color:#e8ecf2;margin:10px 0 24px}
 .lead{font-size:20px;line-height:1.55;color:#c0c7d2}
 .intro p{max-width:760px;color:#aab3c0;line-height:1.75;font-size:16px}
@@ -244,7 +244,7 @@ h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.7rem,5
   .why-image-card{max-width:330px;aspect-ratio:4/5;margin:0 auto}
   .why-image-card img{height:100%;min-height:0}
   .image-panel{height:360px}
-  .image-caption strong{font-size:25pxcolor:#fff;}
+  .image-caption strong{font-size:25px;color:#fff;}
   .floating-note{left:10px;bottom:14px}
   .trust-grid{grid-template-columns:1fr}
   .trust-item{border-right:0!important;border-top:0!important;border-bottom:1px solid var(--line)}
