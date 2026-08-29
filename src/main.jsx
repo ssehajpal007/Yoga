@@ -190,7 +190,7 @@ function App() {
           <button className="brand" onClick={() => scrollTo("top")} aria-label="Return to top">
             <span className="brand-mark"><Leaf size={17} strokeWidth={1.8} /></span>
             <span>
-              <strong>NUDELY</strong>
+              <strong>NATURIST YOGA</strong>
               <small>YOGA & BODY ACCEPTANCE</small>
             </span>
           </button>
@@ -250,7 +250,7 @@ function App() {
 
             <div className="hero-card-wrap">
               <div className="hero-card">
-                <div className="image-panel">
+                <div className="image-panel" role="img" aria-label="Adult European woman practicing yoga in a serene room">
                   <div className="image-overlay"></div>
                   <div className="image-caption">
                     <span>3-DAY EXPERIENCE</span>
@@ -260,17 +260,13 @@ function App() {
                 <div className="hero-card-bottom">
                   <div>
                     <small>WORKSHOP FEE</small>
-                    <strong>{CONFIG.price}</strong>
+                    <strong>Rs 5000</strong>
                   </div>
                   <div className="date-pill">
                     <small>DATES</small>
                     <span>{CONFIG.date}</span>
                   </div>
                 </div>
-              </div>
-              <div className="floating-note">
-                <Sparkles size={15}/>
-                <span>Absolute beginners welcome</span>
               </div>
             </div>
           </div>
@@ -558,7 +554,7 @@ function App() {
           <div className="footer-brand">
             <div className="brand footer-brand-lockup">
               <span className="brand-mark"><Leaf size={17}/></span>
-              <span><strong>NUDELY</strong><small>YOGA & BODY ACCEPTANCE</small></span>
+              <span><strong>NATURIST YOGA</strong><small>YOGA & BODY ACCEPTANCE</small></span>
             </div>
             <p>Online yoga, mindfulness and body acceptance for adults.</p>
           </div>

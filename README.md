@@ -84,3 +84,7 @@ The visual design and content are intentionally componentized so sections can be
 ## Notes
 
 The legal pages included under `public/` are starter templates and should be replaced with finalized legal copy before production launch.
+
+## Hero image
+
+The hero uses `public/yoga-hero.jpg`, an optimized visual asset generated for this landing page.

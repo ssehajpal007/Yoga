@@ -61,9 +61,9 @@ h1 em,h2 em{font-style:italic;font-weight:500}
 
 .hero-card-wrap{position:relative;justify-self:end;width:min(500px,100%)}
 .hero-card{background:#fff;border:1px solid rgba(49,66,57,.1);border-radius:30px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(1.1deg)}
-.image-panel{height:480px;position:relative;background:
-  radial-gradient(circle at 75% 30%, rgba(242,231,215,.35), transparent 23%),
-  linear-gradient(145deg,#a6afa1 0%,#738176 55%,#485b4f 100%)}
+.image-panel{height:480px;position:relative;background-image: url("../yoga-hero.jpg");
+background-size: cover;
+background-position: center;}
 .image-panel:before,.image-panel:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}
 .image-panel:before{width:260px;height:260px;background:rgba(250,244,230,.3);right:-50px;top:-40px}
 .image-panel:after{width:210px;height:210px;background:rgba(31,53,43,.22);left:-60px;bottom:-30px}
