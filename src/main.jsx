@@ -365,11 +365,11 @@ function App() {
             <div className="schedule-options">
               <span className="schedule-label">MORNING</span>
               {CONFIG.sessions.slice(0, 2).map((value) => (
-                <SessionButton key={value} value={value} selected={session === value} onClick={setSession}/>
+                <SessionDisplay key={value} value={value} />
               ))}
               <span className="schedule-label evening-label">EVENING</span>
               {CONFIG.sessions.slice(2).map((value) => (
-                <SessionButton key={value} value={value} selected={session === value} onClick={setSession}/>
+                <SessionDisplay key={value} value={value} />
               ))}
             </div>
           </div>
@@ -616,12 +616,12 @@ function DayCard({ day, title, body }) {
   );
 }
 
-function SessionButton({ value, selected, onClick }) {
+function SessionDisplay({ value }) {
   return (
-    <button className={`session-option ${selected ? "selected" : ""}`} onClick={() => onClick(value)} type="button">
+    <div className="session-option" aria-label={`Workshop session: ${value}`}>
       <span>{value}</span>
-      {selected ? <Check size={17}/> : <ArrowRight size={16}/>}
-    </button>
+      <span className="session-dot" aria-hidden="true"></span>
+    </div>
   );
 }
 

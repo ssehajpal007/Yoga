@@ -134,9 +134,8 @@ h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.7rem,5
 .schedule-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .schedule-label{grid-column:1/-1;font-size:9px;letter-spacing:.2em;color:#738078;margin:3px 0}
 .evening-label{margin-top:12px}
-.session-option{display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(49,66,57,.14);background:rgba(255,255,255,.4);padding:17px 18px;border-radius:14px;color:var(--deep);font-size:12px;text-align:left;transition:.2s ease}
-.session-option:hover{background:#f7f5ee}
-.session-option.selected{background:var(--deep);color:#fff;border-color:var(--deep)}
+.session-option{display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(49,66,57,.14);background:rgba(255,255,255,.4);padding:17px 18px;border-radius:14px;color:var(--deep);font-size:12px;text-align:left;user-select:none}
+.session-dot{width:8px;height:8px;border-radius:50%;background:#9aa894;opacity:.75}
 
 .safety{background:var(--paper)}
 .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
