@@ -20,7 +20,7 @@ npm run build
 1. Create a GitHub repository and push this project to the `main` branch.
 2. In GitHub, go to **Settings → Pages**.
 3. Set **Source** to **GitHub Actions**.
-4. The included workflow at `.github/workflows/deploy.yml` builds and deploys the site automatically.
+4. The included workflow at `.github/workflows/deploy.yml` installs dependencies, builds the site, and deploys it automatically. The workflow uses `npm install`, so a `package-lock.json` is not required.
 
 ## Google Sheets integration
 
