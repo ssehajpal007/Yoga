@@ -1,52 +1,86 @@
-# Samriti Sharma Physics Classes — Website
+# Naturist Yoga & Body Acceptance Workshop
 
-## 🚀 Deploying to GitHub Pages
+A premium React/Vite landing page designed for GitHub Pages.
 
-1. Create a new repository on GitHub (e.g. `samriti-physics`)
-2. Upload all files maintaining the folder structure below
-3. Go to **Settings → Pages → Source → Deploy from branch → main / root**
-4. Your site will be live at: `https://yourusername.github.io/samriti-physics/`
+## Run locally
 
-## 📁 Folder Structure
-```
-samriti-physics-site/
-├── index.html         ← Home page
-├── about.html         ← About Samriti Sharma
-├── courses.html       ← Class 9 & 10 courses
-├── contact.html       ← Contact form + map
-├── style.css          ← All styles
-├── script.js          ← Animations, navbar, FAQ
-└── images/
-    └── teacher.jpg    ← Add Samriti's photo here
+```bash
+npm install
+npm run dev
 ```
 
-## 📩 Setting Up the Contact Form (Formspree)
+## Build
 
-1. Go to [https://formspree.io](https://formspree.io) → Create a free account
-2. Create a new form → set email to `test@gmail.com`
-3. Copy your endpoint URL (e.g. `https://formspree.io/f/xabcdefg`)
-4. Open `contact.html` → find this line:
-   ```html
-   action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE"
-   ```
-5. Replace `YOUR_FORMSPREE_ENDPOINT_HERE` with your actual endpoint
+```bash
+npm run build
+```
 
-## 👩‍🏫 Adding the Teacher Photo
+## GitHub Pages
 
-1. Save Samriti Sharma's photo as `teacher.jpg`
-2. Place it inside the `images/` folder
-3. Open `about.html` → the image will display automatically
-   (The current src links to a placeholder — you can update the src to `images/teacher.jpg`)
+1. Create a GitHub repository and push this project to the `main` branch.
+2. In GitHub, go to **Settings → Pages**.
+3. Set **Source** to **GitHub Actions**.
+4. The included workflow at `.github/workflows/deploy.yml` builds and deploys the site automatically.
 
-## 🗺️ Customising the Google Map
+## Google Sheets integration
 
-1. Go to Google Maps → search `#1138, Rathpur Colony, Pinjore, Haryana`
-2. Click **Share → Embed a map** → Copy the iframe code
-3. Replace the `<iframe src="...">` in `contact.html` with your new embed
+The frontend supports a Google Apps Script Web App endpoint through the Vite environment variable:
 
-## 🎨 Colour Customisation
+```text
+VITE_GOOGLE_SHEETS_ENDPOINT
+```
 
-All colours are defined as CSS variables in `style.css` (top of file).
-Change `--blue-mid`, `--blue-dark`, `--accent` to rebrand the site.
+For GitHub Actions, add it as a **repository variable**:
 
-© 2026 Samriti Sharma Physics Classes
+**Settings → Secrets and variables → Actions → Variables → New repository variable**
+
+Name:
+
+```text
+VITE_GOOGLE_SHEETS_ENDPOINT
+```
+
+Value:
+
+```text
+https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec
+```
+
+Do not put private API keys or service credentials in the frontend.
+
+The app currently falls back to demo mode when the endpoint is not configured.
+
+## Form fields recorded
+
+Registration:
+- Timestamp
+- Name
+- Age
+- Phone
+- Email
+- Country
+- Preferred Session
+- Payment Status
+- Telegram Status
+- Registration Status
+
+Questions:
+- Timestamp
+- Name
+- Email / Phone
+- Question
+
+## Customize the workshop
+
+Edit `src/main.jsx` and change the `CONFIG` object:
+
+- `price`
+- `date`
+- `sessions`
+- `googleSheetsEndpoint`
+
+The visual design and content are intentionally componentized so sections can be edited independently.
+
+## Notes
+
+The legal pages included under `public/` are starter templates and should be replaced with finalized legal copy before production launch.
